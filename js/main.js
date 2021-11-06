@@ -20,6 +20,14 @@ function fizzBuzz(event) {
     numbers.push(i);
   }
 
+  for (let i = 0; i <= numbers.length; i++) {
+    if (i % fizzNumber == 0) {
+      numbers[i] = "FIZZ";
+    } else if (i % buzzNumber == 0) {
+      numbers[i] = "BUZZ";
+    }
+  }
+
   console.log(numbers);
 
   event.preventDefault();
