@@ -1,30 +1,29 @@
-let fizzNumber;
-let buzzNumber;
+// Selectors
+const fizzValue = document.getElementById("fizz-value");
+const buzzValue = document.getElementById("buzz-value");
+const submitBtn = document.querySelector(".btn");
 
-document.querySelector(".btn").addEventListener("click", fizzBuzz);
-
-// Get User Input
-function getValue(event) {
-  fizzNumber = document.getElementById("fizz-value").value;
-  buzzNumber = document.getElementById("buzz-value").value;
-
-  event.preventDefault();
-}
+// Event Listeners
+submitBtn.addEventListener("click", fizzBuzz);
 
 // Fizz Buzz Logic
 function fizzBuzz(event) {
+  // Geting Values
+  const fizzNumber = fizzValue.value;
+  const buzzNumber = buzzValue.value;
+
   // Generating the array 1 to 100
   let numbers = [];
 
   for (let i = 1; i <= 100; i++) {
-    numbers.push(i);
-  }
-
-  for (let i = 0; i <= numbers.length; i++) {
-    if (i % fizzNumber == 0) {
-      numbers[i] = "FIZZ";
+    if (i % fizzNumber == 0 && i % buzzNumber == 0) {
+      numbers.push("FIZZ");
     } else if (i % buzzNumber == 0) {
-      numbers[i] = "BUZZ";
+      numbers.push("BUZZ");
+    } else if (i % fizzNumber == 0) {
+      numbers.push("FIZZ BUZZ");
+    } else {
+      numbers.push(i);
     }
   }
 
