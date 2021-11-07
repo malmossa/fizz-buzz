@@ -8,7 +8,7 @@ submitBtn.addEventListener("click", fizzBuzz);
 
 // Fizz Buzz Logic
 function fizzBuzz(event) {
-  // Geting Values
+  // Getting Values
   const fizzNumber = fizzValue.value;
   const buzzNumber = buzzValue.value;
 
