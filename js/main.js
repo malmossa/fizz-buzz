@@ -41,18 +41,18 @@ function displayResult() {
   // Clear the table
   table.innerHTML = "";
 
-  for (let i = 0; i < numbers.length; i++) {
+  for (let i = 0; i < numbers.length; i += 10) {
     table.innerHTML += `<tr>
       <td>${numbers[i]}</td>
-      <td>${numbers[i]}</td>
-      <td>${numbers[i]}</td>
-      <td>${numbers[i]}</td>
-      <td>${numbers[i]}</td>
-      <td>${numbers[i]}</td>
-      <td>${numbers[i]}</td>
-      <td>${numbers[i]}</td>
-      <td>${numbers[i]}</td>
-      <td>${numbers[i]}</td>
+      <td>${numbers[i + 1]}</td>
+      <td>${numbers[i + 2]}</td>
+      <td>${numbers[i + 3]}</td>
+      <td>${numbers[i + 4]}</td>
+      <td>${numbers[i + 5]}</td>
+      <td>${numbers[i + 6]}</td>
+      <td>${numbers[i + 7]}</td>
+      <td>${numbers[i + 8]}</td>
+      <td>${numbers[i + 9]}</td>
     </tr>`;
   }
 }
