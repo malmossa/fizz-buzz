@@ -35,7 +35,6 @@ function fizzBuzz(event) {
   event.preventDefault();
 }
 
-console.log(numbers);
 // Display Result
 function displayResult() {
   // Clear the table
