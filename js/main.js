@@ -21,11 +21,11 @@ function fizzBuzz(event) {
 
   for (let i = 1; i <= 100; i++) {
     if (i % fizzNumber == 0 && i % buzzNumber == 0) {
-      numbers.push("FIZZ");
+      numbers.push("Fizz Buzz");
     } else if (i % buzzNumber == 0) {
-      numbers.push("BUZZ");
+      numbers.push("Buzz");
     } else if (i % fizzNumber == 0) {
-      numbers.push("FIZZ BUZZ");
+      numbers.push("Fizz");
     } else {
       numbers.push(i);
     }
@@ -41,7 +41,7 @@ function displayResult() {
   // Clear the table
   table.innerHTML = "";
 
-  for (let i = 0; i < numbers.length; i += 10) {
+  for (let i = 0; i <= numbers.length; i += 10) {
     table.innerHTML += `<tr>
       <td>${numbers[i]}</td>
       <td>${numbers[i + 1]}</td>
