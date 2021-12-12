@@ -1,2 +1,2 @@
-# JS-projects-template
-JavaScript Projects Template with Bootstrap 5
+# Fizz Buzz 
+JavaScript Project with Bootstrap 5
