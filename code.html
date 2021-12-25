@@ -49,7 +49,6 @@
               href="https://github.com/malmossa/fizz-buzz"
               >GitRepo</a
             >
-            <a class="nav-link" target="_blank" href="#">About</a>
           </div>
         </div>
       </div>
@@ -57,7 +56,7 @@
 
     <main class="flex-shrink-0">
       <div class="container py-5 px-5 mt-5">
-        <h2>The Code for APP NAME.</h2>
+        <h2>The Code for FIZZ BUZZ.</h2>
         <div class="row row-cols-1 row-cols-lg-2">
           <div class="col-lg-8">
             <pre class="line-numbers">
@@ -67,10 +66,12 @@
                 const buzzValue = document.getElementById("buzz-value");
                 const table = document.getElementById("tableBody");
                 const tableData = document.getElementById("dataTemplate");
-                const submitBtn = document.querySelector(".btn");
+                const submitBtn = document.querySelector(".submit");
+                const clearBtn = document.querySelector(".clear");
 
                 // Event Listeners
                 submitBtn.addEventListener("click", fizzBuzz);
+                clearBtn.addEventListener("click", startOver);
 
                 // Array
                 let numbers = [];
@@ -89,14 +90,14 @@
                     } else if (i % buzzNumber == 0) {
                       numbers.push("Buzz");
                     } else if (i % fizzNumber == 0) {
-                     numbers.push("Fizz");
+                      numbers.push("Fizz");
                     } else {
                       numbers.push(i);
                     }
                   }
 
-                    displayResult();
-                    event.preventDefault();
+                  displayResult();
+                  event.preventDefault();
                 }
 
                 // Display Result
@@ -108,7 +109,7 @@
                     table.innerHTML += `<tr>
                       <td>${numbers[i]}</td>
                       <td>${numbers[i + 1]}</td>
-                                    <td>${numbers[i + 2]}</td>
+                      <td>${numbers[i + 2]}</td>
                       <td>${numbers[i + 3]}</td>
                       <td>${numbers[i + 4]}</td>
                       <td>${numbers[i + 5]}</td>
@@ -119,20 +120,26 @@
                     </tr>`;
                   }
                 }
+
+                // Clear and Start Over
+
+                function startOver() {
+                  table.innerHTML = "";
+                }
               </code>
             </pre>
           </div>
           <div class="col-lg-4">
             <h5>My thought process when writing this app</h5>
             <ol>
-              <li>On the top i assign all the selectors to a variables.</li>
+              <li>On the top I assigned all the selectors to a variable.</li>
               <li>
-                I have the event listener on separate line for easy viewing.
+                I have the event listener on separate lines for easy viewing.
               </li>
               <li>I have declared global empty array.</li>
               <li>
-                I Only created 2 functions one for Logic and one for Displaying
-                the result to the user
+                I only created 3 functions one for Logic, one for displaying the
+                result to the user, and the other for starting over.
               </li>
             </ol>
           </div>
@@ -158,11 +165,6 @@
               <div class="col social">
                 <a href="#" target="_blank"
                   ><i class="fab fa-github fa-2x"></i
-                ></a>
-              </div>
-              <div class="col social">
-                <a href="#" target="_blank"
-                  ><i class="fab fa-twitter fa-2x"></i
                 ></a>
               </div>
             </div>

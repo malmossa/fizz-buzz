@@ -3,10 +3,12 @@ const fizzValue = document.getElementById("fizz-value");
 const buzzValue = document.getElementById("buzz-value");
 const table = document.getElementById("tableBody");
 const tableData = document.getElementById("dataTemplate");
-const submitBtn = document.querySelector(".btn");
+const submitBtn = document.querySelector(".submit");
+const clearBtn = document.querySelector(".clear");
 
 // Event Listeners
 submitBtn.addEventListener("click", fizzBuzz);
+clearBtn.addEventListener("click", startOver);
 
 // Array
 let numbers = [];
@@ -54,4 +56,10 @@ function displayResult() {
       <td>${numbers[i + 9]}</td>
     </tr>`;
   }
+}
+
+// Clear and Start Over
+
+function startOver() {
+  table.innerHTML = "";
 }
